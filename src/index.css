@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #F8FAFC;
+    color: #0F172A;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  @keyframes alertPulse {
+    0%, 100% {
+      background-color: rgba(225, 29, 72, 0.95);
+      box-shadow: 0 0 25px rgba(225, 29, 72, 0.6);
+    }
+    50% {
+      background-color: rgba(159, 18, 57, 0.98);
+      box-shadow: 0 0 45px rgba(244, 63, 94, 0.9);
+    }
+  }
+
+  .animate-alert-pulse {
+    animation: alertPulse 1.2s infinite ease-in-out;
+  }
+
+  /* Room status presets for Clean Minimalism */
+  .status-occ {
+    background-color: #FEE2E2;
+    color: #991B1B;
+    border-color: #FCA5A5;
+  }
+  .status-arr {
+    background-color: #DBEAFE;
+    color: #1E40AF;
+    border-color: #93C5FD;
+  }
+  .status-do {
+    background-color: #FEF9C3;
+    color: #854D0E;
+    border-color: #FDE047;
+  }
+  .status-vac {
+    background-color: #DCFCE7;
+    color: #166534;
+    border-color: #86EFAC;
+  }
+
+  /* Matrix presets */
+  .matrix-eng {
+    background-color: #E2E8F0;
+    color: #1E293B;
+  }
+  .matrix-hky {
+    background-color: #FEF08A;
+    color: #854D0E;
+  }
+  .matrix-hkn {
+    background-color: #FECACA;
+    color: #991B1B;
+  }
+  .matrix-done {
+    background-color: #BBF7D0;
+    color: #14532D;
+  }
+}
+
+/* Custom scrollbar for dense hotel matrix tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Print Styles for Module 03 and Task Print */
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+    font-size: 11pt;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 12mm;
+  }
+}
+

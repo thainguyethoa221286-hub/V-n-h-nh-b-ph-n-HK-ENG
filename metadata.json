@@ -1,0 +1,6 @@
+{
+  "name": "Hệ thống Quản lý Vận hành & Bảo trì Khách sạn",
+  "description": "Hệ thống quản lý sơ đồ 55 phòng, báo hỏng realtime, bảo trì định kỳ matrix, báo cáo in ấn A4 và phân quyền nhân sự.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
